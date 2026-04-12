@@ -29,6 +29,35 @@ Some prompts to answer:
 
 You can include a simple diagram or bullet list if helpful.
 
+The system work by giving a score to each song based on how well it matches the user
+First Song Features
+Each Song includes both categorical and numeric features:
+Categorical:
+genre (ex: Pop, Rock)
+mood (ex: Upbeat, Chill)
+Numeric (scaled 0 → 1):
+energy
+danceability
+valence (how happy/sad a song feels)
+
+I use both because genre/mood capture the overall vibe, while numeric features give more detailed control.
+
+Next the UserProfile stores:
+
+Preferred genre and mood
+Target values for numeric features (ex: energy = 0.8)
+Weights for each feature (how important each one is)
+
+For example, I’d usually give genre a higher weight than mood, since users are more likely to reject songs outside their preferred genre.
+
+For each song, I compute how close it is to the user’s preferences. So the closer the song is to the user’s target, the higher the score. Then I combine everything into one score:
+g = genre match (0 or 1)
+m = mood match (0 or 1)
+closeness for each numeric feature
+
+This gives me a single compatibility score for each song.
+
+Once every song has a score return the top N songs
 ---
 
 ## Getting Started
