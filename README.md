@@ -29,6 +29,18 @@ Some prompts to answer:
 
 You can include a simple diagram or bullet list if helpful.
 
+### Workflow Table
+
+| Step | Stage | What Happens | Key Function(s) |
+|---|---|---|---|
+| 1 | Start Program | The app starts in `main()` and prepares to run test user profiles. | `main` |
+| 2 | Load Dataset | Song rows are read from `data/songs.csv` and converted into song dictionaries. | `load_songs` |
+| 3 | Build User Profile | A profile's preferences (genre, mood, energy, acoustic preference) are selected. | `profiles` list in `main.py` |
+| 4 | Score Each Song | Every song is compared to the user profile using weighted rules (genre, mood, energy, acousticness, valence). | `score_song` |
+| 5 | Rank Songs | All `(song, score, reasons)` results are sorted from highest to lowest score. | `recommend_songs` |
+| 6 | Select Top K | Only the top `k` songs are kept as recommendations. | `recommend_songs(..., k=5)` |
+| 7 | Explain Results | Recommendation reasons are formatted and printed for the user. | `print_recommendations` |
+
 The system work by giving a score to each song based on how well it matches the user
 First Song Features
 Each Song includes both categorical and numeric features:
