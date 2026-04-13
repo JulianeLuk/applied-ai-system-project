@@ -9,26 +9,53 @@ You will implement the functions in recommender.py:
 - recommend_songs
 """
 
+from tabulate import tabulate
+
 from src.recommender import load_songs, recommend_songs
 
 
 def print_recommendations(user_prefs, songs, profile_name):
     """Helper to print recommendations for a given profile."""
-    recommendations = recommend_songs(user_prefs, songs, k=5)
+    recommendations = recommend_songs(user_prefs, songs, k=3)
     
     print(f"\n{'='*60}")
     print(f"Profile: {profile_name}")
     print(f"Preferences: {user_prefs}")
     print(f"{'='*60}\n")
-    
+
+    table_rows = []
     for i, rec in enumerate(recommendations, 1):
         song, score, reasons = rec
         if isinstance(reasons, list):
             explanation = "; ".join(reasons)
         else:
             explanation = str(reasons)
-        print(f"{i}. {song['title']} - Score: {score:.2f}")
-        print(f"   Because: {explanation}\n")
+
+        table_rows.append(
+            [
+                i,
+                song["title"],
+                song["artist"],
+                song["genre"],
+                song["mood"],
+                f"{score:.2f}",
+                explanation,
+            ]
+        )
+
+    headers = ["#", "Title", "Artist", "Genre", "Mood", "Score", "Reasons"]
+    max_widths = [3, 24, 18, 12, 12, 8, 56]
+
+    print(
+        tabulate(
+            table_rows,
+            headers=headers,
+            tablefmt="fancy_grid",
+            maxcolwidths=max_widths,
+        )
+    )
+
+    print()
 
 
 def main() -> None:
