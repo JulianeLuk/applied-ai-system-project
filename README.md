@@ -1,10 +1,12 @@
 # MUSE — AI Music Recommender
 
-A rule-based music recommendation engine augmented with a Retrieval-Augmented Generation (RAG) explainer and a Streamlit web interface. Built across four modules of AI110 at the University of Dayton.
+A rule-based music recommendation engine augmented with a Retrieval-Augmented Generation (RAG) explainer and a Streamlit web interface. 
 
+## Loom Link 
+https://www.loom.com/share/cb981dbe270e489a9bec4e11f4056498 
 ---
 
-## Original Project (Modules 1–3)
+## Original Project (Modules 3)
 
 The foundation of this project was the **Music Recommender Simulation**, a pure rule-based system with no AI or graphical interface. Its goal was to represent songs and a user "taste profile" as structured data, design a weighted scoring function to match songs to preferences, and evaluate where that logic succeeded or failed. The system scored each song across five features (genre, mood, energy, acousticness, and valence), ranked all songs by score, and printed a formatted table of the top results to the terminal. It demonstrated how real-world recommenders reduce human taste to numeric signals — and how small design choices like feature weighting can create bias.
 
@@ -17,7 +19,7 @@ MUSE takes a user's music preferences (genre, mood, energy level, and acoustic t
 1. **Rule-based scoring** — transparent, auditable reasons for every recommendation
 2. **AI-generated explanation** — a friendly 2–3 sentence natural language summary powered by an LLM via OpenRouter
 
-This matters because most recommendation systems are black boxes. MUSE is designed to be explainable: every result comes with a numeric score, a breakdown of why it matched, and a human-readable AI narrative. It demonstrates how rule-based logic and generative AI can work together rather than replace each other.
+ MUSE is designed to be explainable: every result comes with a numeric score, a breakdown of why it matched, and a human-readable AI narrative. It demonstrates how rule-based logic and generative AI can work together rather than replace each other.
 
 ---
 
@@ -29,7 +31,7 @@ The system has four layers:
 - `src/main.py` (CLI): runs five preset user profiles automatically
 - `app.py` (Streamlit): interactive sidebar with dropdowns, sliders, and a submit button
 
-**2. Data Layer** — `data/songs.csv` holds 200 songs with 10 features each (title, artist, genre, mood, energy, tempo, valence, danceability, acousticness) across 10 genres (pop, lofi, rock, jazz, ambient, synthwave, indie pop, electronic, hip-hop, r&b) and 6 moods (happy, chill, intense, relaxed, moody, focused). `load_songs()` parses this CSV and skips malformed rows.
+**2. Data Layer** — `data/songs.csv` holds 19 songs with 10 features each (title, artist, genre, mood, energy, tempo, valence, danceability, acousticness). `load_songs()` parses this CSV and skips malformed rows.
 
 **3. Recommender Engine** (`src/recommender.py`) — `score_song()` computes a compatibility score (0–7.0) for each song using weighted rules:
 - Genre match: +2.0 pts
@@ -104,7 +106,7 @@ This runs five preset profiles (High-Energy Pop, Chill Lofi, Deep Intense Rock, 
 streamlit run app.py
 ```
 
-Open `http://localhost:8501` in your browser. Use the sidebar to select your genre, mood, energy level, acoustic preference, and number of results, then click **Get Recommendations**.
+Open browser. Use the sidebar to select your genre, mood, energy level, acoustic preference, and number of results, then click **Get Recommendations**.
 
 **6. Run the test suite**
 
@@ -174,21 +176,18 @@ Genre is the strongest identity signal in music taste — most users will reject
 
 ## Testing Summary
 
-**Results: 7 / 7 automated tests passed (0.08 s)**
+**What worked:**
+- All five consistency tests in `test_consistency.py` pass: the same profile always returns the same top song, scores stay within 0–7.0, `k` results are always returned, results are sorted descending, and different profiles produce different top songs.
+- The two unit tests in `test_recommender.py` confirm that the pop/happy profile surfaces a pop/happy song first and that explanations are non-empty strings.
+- The Streamlit app renders correctly with and without an API key configured.
 
-| File | Tests | What they verify |
-|---|---|---|
-| `test_consistency.py` | 5 | Determinism, score range (0–7.0), correct k returned, descending sort, distinct results for distinct profiles |
-| `test_recommender.py` | 2 | Top-ranked song matches profile, explanations are non-empty |
+**What didn't work / limitations discovered:**
+- The scoring function can produce ties when two songs are nearly identical. Tie-breaking is currently positional (CSV order), which is acceptable for a demo but would need a secondary sort key in production.
+- With only 19 songs in the catalog, rare genres like synthwave sometimes return only one strong match and two weaker fallback songs regardless of preference.
+- The LLM occasionally generates generic text that could apply to any recommendation set when the matched songs are very similar to each other. Adding more variety to the catalog would improve explanation specificity.
 
-**Confidence scoring** — each recommendation displays a match confidence percentage (`score / 7.0 × 100`). In practice, strong profile matches (genre + mood + energy all aligned) score 85–95% confidence; weak matches score 40–60%. This gives users and reviewers a quick signal of result quality without needing to interpret raw numbers.
-
-**Logging** — all requests, per-song scores with confidence, and AI responses are written to `logs/app.log`. Errors (missing API key, bad CSV rows, failed API calls) are logged at WARNING/ERROR level so every failure is traceable.
-
-**Limitations discovered:**
-- Tie-breaking is positional (CSV order) when two songs score identically. Acceptable for a demo; a production system would need a secondary sort key.
-- Genres underrepresented in the catalog (e.g., r&b, electronic) sometimes return only one strong match and fill the remaining slots with weaker fallbacks.
-- The LLM occasionally generates generic text when the top-k songs are very similar to each other. A more diverse catalog would improve explanation specificity.
+**What I learned:**
+Testing a recommender is not just about checking function outputs  it's about checking system behavior across inputs. The consistency tests were more revealing than the unit tests because they caught a sorting-stability issue that unit tests would have missed.
 
 ---
 
@@ -198,4 +197,4 @@ This project showed me that building an AI system is really a series of design d
 
 The RAG pattern was the most interesting part to implement. Before this project, I thought of AI as either "it knows the answer" or "it doesn't." RAG changed that: the LLM doesn't need to know your music catalog — it just needs to read the context you hand it and synthesize something useful. That mental model feels broadly applicable well beyond music recommendation.
 
-The part that surprised me most was how quickly bias appears even in a 19-song dataset. Genre reinforcement, acoustic overrepresentation, and small-catalog skew all showed up without me deliberately building them in. Real systems deal with these problems at a scale where human inspection is impossible, which makes fairness tooling and diverse dataset curation genuinely hard engineering problems rather than afterthoughts.
+The part that surprised me most was how quickly bias appears. Genre reinforcement, acoustic overrepresentation, and small-catalog skew all showed up without me deliberately building them in. Real systems deal with these problems at a scale where human inspection is impossible, which makes fairness tooling and diverse dataset curation genuinely hard engineering problems rather than afterthoughts.
