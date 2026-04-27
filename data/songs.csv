@@ -19,3 +19,183 @@ id,title,artist,genre,mood,energy,tempo_bpm,valence,danceability,acousticness
 18,After Class Glow,Harbor Lights,indie pop,happy,0.72,116,0.79,0.77,0.31
 19,Sunset Commute,Metro Vibes,pop,relaxed,0.61,108,0.70,0.75,0.27
 20,Night Owl Notes,LoRoom,lofi,chill,0.36,74,0.55,0.57,0.88
+21,Candy Skies,Solar Bloom,pop,happy,0.80,120,0.88,0.83,0.15
+22,Summer Drive,The Coastal Kids,pop,happy,0.78,115,0.85,0.80,0.20
+23,Electric Feelings,Prism Wave,pop,happy,0.83,125,0.82,0.84,0.12
+24,Daydream Window,Soft Signal,pop,relaxed,0.55,100,0.72,0.70,0.30
+25,Cityscape Girl,Urban Glow,pop,happy,0.77,118,0.87,0.81,0.22
+26,Last Train Home,The Station Kids,pop,moody,0.62,105,0.50,0.68,0.35
+27,Confetti Rain,Glitter Pulse,pop,happy,0.85,130,0.90,0.87,0.08
+28,Late Night Glow,Neon Echo,pop,relaxed,0.58,104,0.68,0.72,0.28
+29,Chasing Horizons,Metro Vibes,pop,intense,0.88,135,0.75,0.86,0.10
+30,Pink Lemonade,Fizzy Sound,pop,happy,0.81,122,0.89,0.82,0.17
+31,Midnight Pop,Voltage,pop,moody,0.65,108,0.55,0.71,0.25
+32,Golden Ticket,City Bloom,pop,happy,0.84,126,0.88,0.85,0.13
+33,Radio Silence,Harbor Lights,pop,moody,0.60,102,0.48,0.65,0.38
+34,Dance Floor Dreams,Pulse Factory,pop,happy,0.86,128,0.87,0.88,0.07
+35,Quiet Storm,Soft Signal,pop,relaxed,0.52,98,0.65,0.68,0.33
+36,Fire and Ice,Prism Wave,pop,intense,0.91,138,0.72,0.84,0.09
+37,Bloom Season,Wildflower Wave,pop,happy,0.76,116,0.86,0.80,0.23
+38,Downtown Lights,Metro Vibes,pop,happy,0.79,120,0.83,0.82,0.19
+39,Satellite Love,Orbit Pop,pop,moody,0.63,106,0.52,0.69,0.32
+40,Rush Hour,The Station Kids,pop,intense,0.89,132,0.74,0.85,0.11
+41,Cotton Candy Sky,Pastel Pop,pop,happy,0.75,114,0.91,0.78,0.26
+42,Neon Heartbeat,Voltage,pop,intense,0.87,130,0.70,0.86,0.10
+43,Slow Motion,Harbor Lights,pop,relaxed,0.54,96,0.67,0.66,0.37
+44,Glitter Bomb,Pulse Factory,pop,happy,0.82,124,0.85,0.83,0.15
+45,Storm Glass,Prism Wave,pop,moody,0.66,110,0.47,0.70,0.30
+46,Morning Pages,Cafe Static,lofi,chill,0.33,70,0.62,0.55,0.85
+47,Rain on Glass,Paper Lanterns,lofi,chill,0.38,76,0.58,0.60,0.82
+48,Study Break,Quiet Circuit,lofi,focused,0.41,80,0.55,0.58,0.79
+49,Dusty Vinyl,LoRoom,lofi,relaxed,0.30,68,0.64,0.52,0.88
+50,Amber Light,Slow Frequency,lofi,chill,0.36,74,0.61,0.57,0.86
+51,Blanket Fort,Cozy Beats,lofi,chill,0.32,72,0.66,0.54,0.90
+52,Late Assignment,Paper Lanterns,lofi,focused,0.43,82,0.53,0.61,0.77
+53,Sunday Brew,Cafe Static,lofi,relaxed,0.28,66,0.68,0.50,0.92
+54,Pencil Sketch,Quiet Circuit,lofi,focused,0.40,78,0.57,0.59,0.80
+55,Foggy Morning,Slow Frequency,lofi,chill,0.34,71,0.60,0.56,0.87
+56,Textbook Dreams,Cozy Beats,lofi,focused,0.42,80,0.54,0.60,0.81
+57,Vinyl Crackle,LoRoom,lofi,chill,0.37,75,0.59,0.58,0.84
+58,Moonbeam Study,Paper Lanterns,lofi,focused,0.39,77,0.56,0.57,0.83
+59,Sleepy Afternoon,Cafe Static,lofi,chill,0.31,69,0.63,0.53,0.89
+60,Rooftop Garden,Cozy Beats,lofi,relaxed,0.29,67,0.67,0.51,0.91
+61,Dorm Room Drift,Quiet Circuit,lofi,chill,0.35,73,0.61,0.55,0.86
+62,Code and Coffee,Slow Frequency,lofi,focused,0.44,83,0.52,0.62,0.76
+63,Midnight Read,LoRoom,lofi,focused,0.38,76,0.55,0.58,0.82
+64,Autumn Pages,Cafe Static,lofi,chill,0.33,71,0.64,0.54,0.88
+65,Soft Pencil Lines,Paper Lanterns,lofi,relaxed,0.27,65,0.69,0.49,0.93
+66,Broken Circuit,Steel Hearts,rock,intense,0.88,145,0.44,0.62,0.13
+67,Mountain Echo,Cliff Edge,rock,intense,0.85,140,0.47,0.63,0.15
+68,Rust and Fire,Voltline,rock,intense,0.92,155,0.42,0.65,0.08
+69,Glass Highway,The Shredders,rock,intense,0.87,142,0.46,0.64,0.12
+70,Static Mind,Gravel Sound,rock,moody,0.72,118,0.38,0.68,0.20
+71,Empty Warehouse,Steel Hearts,rock,moody,0.68,112,0.35,0.65,0.25
+72,Concrete Dreams,Voltline,rock,moody,0.70,115,0.40,0.67,0.22
+73,Paper Walls,The Shredders,rock,moody,0.65,108,0.37,0.63,0.28
+74,Summer Anthem,Cliff Edge,rock,happy,0.80,130,0.72,0.75,0.18
+75,Blazing Trail,Gravel Sound,rock,intense,0.90,150,0.50,0.66,0.10
+76,Signal Flare,Steel Hearts,rock,intense,0.86,138,0.45,0.63,0.14
+77,Tidal Force,Voltline,rock,intense,0.93,158,0.43,0.67,0.07
+78,Hollow Ground,The Shredders,rock,moody,0.67,110,0.36,0.64,0.26
+79,Aftershock,Cliff Edge,rock,intense,0.91,152,0.41,0.65,0.09
+80,Wild Heart,Gravel Sound,rock,happy,0.82,134,0.68,0.73,0.16
+81,Iron Curtain,Steel Hearts,rock,intense,0.89,148,0.44,0.64,0.11
+82,Falling Forward,Voltline,rock,moody,0.71,116,0.39,0.66,0.21
+83,Daylight Riot,The Shredders,rock,intense,0.88,144,0.46,0.63,0.13
+84,Cold Shoulder,Gravel Sound,rock,moody,0.66,109,0.34,0.62,0.29
+85,Spark Plug,Cliff Edge,rock,happy,0.78,128,0.70,0.74,0.20
+86,Floating Island,Drift Signal,ambient,chill,0.25,58,0.70,0.38,0.94
+87,Desert Wind,Horizon Sound,ambient,relaxed,0.32,62,0.66,0.42,0.90
+88,Crystal Cave,Echo Chamber,ambient,chill,0.22,55,0.72,0.35,0.96
+89,Deep Ocean,Tidal Waves,ambient,moody,0.35,65,0.48,0.44,0.85
+90,Mountain Mist,Orbit Bloom,ambient,chill,0.27,59,0.68,0.39,0.93
+91,Solar Wind,Drift Signal,ambient,focused,0.38,68,0.58,0.45,0.88
+92,Lunar Garden,Horizon Sound,ambient,chill,0.24,57,0.71,0.37,0.95
+93,Pulse of Earth,Echo Chamber,ambient,relaxed,0.33,63,0.64,0.43,0.91
+94,Nebula Dreams,Tidal Waves,ambient,moody,0.30,62,0.50,0.40,0.89
+95,Forest Path,Orbit Bloom,ambient,relaxed,0.28,60,0.67,0.41,0.92
+96,Rain Temple,Drift Signal,ambient,chill,0.23,56,0.73,0.36,0.96
+97,Comet Trail,Horizon Sound,ambient,focused,0.40,70,0.56,0.47,0.86
+98,Soft Horizon,Echo Chamber,ambient,relaxed,0.31,62,0.65,0.42,0.90
+99,Twilight Zone,Tidal Waves,ambient,moody,0.34,64,0.47,0.43,0.87
+100,Starfield Walk,Orbit Bloom,ambient,focused,0.37,67,0.60,0.46,0.87
+101,Frozen Tundra,Drift Signal,ambient,moody,0.26,58,0.45,0.37,0.94
+102,Zen Garden,Horizon Sound,ambient,chill,0.21,54,0.74,0.34,0.97
+103,Aurora Drift,Echo Chamber,ambient,chill,0.29,61,0.69,0.40,0.93
+104,Velvet Evening,Brass and Bow,jazz,relaxed,0.38,88,0.72,0.55,0.88
+105,Smooth Operator,Blue Note Quartet,jazz,relaxed,0.40,92,0.70,0.57,0.87
+106,Rainy Day Jazz,Slow Stereo,jazz,chill,0.35,84,0.68,0.53,0.90
+107,Club Midnight,Brass and Bow,jazz,moody,0.55,100,0.52,0.63,0.75
+108,Saxophony,Blue Note Quartet,jazz,happy,0.45,96,0.78,0.60,0.84
+109,Late Lounge,Velvet Keys,jazz,relaxed,0.36,86,0.74,0.54,0.89
+110,Blue Hour,Slow Stereo,jazz,moody,0.50,98,0.50,0.60,0.80
+111,Uptown Swing,Brass and Bow,jazz,happy,0.52,104,0.80,0.65,0.78
+112,Corner Booth,Blue Note Quartet,jazz,relaxed,0.33,82,0.70,0.52,0.91
+113,Candlelight,Velvet Keys,jazz,chill,0.30,78,0.65,0.50,0.93
+114,Piano Bar,Slow Stereo,jazz,relaxed,0.42,94,0.73,0.58,0.86
+115,Autumn Jazz,Brass and Bow,jazz,moody,0.48,96,0.53,0.61,0.82
+116,Trumpet Dreams,Blue Note Quartet,jazz,happy,0.50,100,0.79,0.63,0.80
+117,Midnight Sax,Velvet Keys,jazz,moody,0.45,94,0.48,0.58,0.84
+118,Bossa Evening,Slow Stereo,jazz,relaxed,0.34,84,0.76,0.53,0.90
+119,Jazz Cafe,Brass and Bow,jazz,chill,0.31,80,0.66,0.51,0.92
+120,Smooth Walk,Blue Note Quartet,jazz,relaxed,0.39,90,0.71,0.56,0.87
+121,Twilight Piano,Velvet Keys,jazz,chill,0.28,76,0.63,0.49,0.94
+122,Retro Grid,Turbo Kids,synthwave,intense,0.85,126,0.65,0.84,0.12
+123,Neon Palace,Cyber Pulse,synthwave,moody,0.72,112,0.48,0.78,0.18
+124,Digital Rain,Wave Rider,synthwave,moody,0.68,108,0.45,0.75,0.20
+125,Chrome City,Retro Drive,synthwave,intense,0.88,132,0.62,0.85,0.10
+126,Laser Highway,Turbo Kids,synthwave,intense,0.91,138,0.58,0.87,0.08
+127,Outrun Dream,Cyber Pulse,synthwave,happy,0.78,120,0.72,0.82,0.15
+128,Electric Noir,Wave Rider,synthwave,moody,0.70,110,0.42,0.77,0.19
+129,Vapor Trail,Retro Drive,synthwave,focused,0.75,115,0.55,0.80,0.14
+130,Midnight Protocol,Turbo Kids,synthwave,intense,0.89,135,0.60,0.86,0.09
+131,Pink Horizon,Cyber Pulse,synthwave,happy,0.76,118,0.75,0.81,0.16
+132,Synth Cathedral,Wave Rider,synthwave,moody,0.65,106,0.43,0.73,0.22
+133,Overdrive,Retro Drive,synthwave,intense,0.92,140,0.57,0.88,0.07
+134,Cassette Dream,Turbo Kids,synthwave,moody,0.67,108,0.46,0.74,0.21
+135,Future Past,Cyber Pulse,synthwave,focused,0.73,113,0.54,0.79,0.15
+136,Binary Sunset,Wave Rider,synthwave,happy,0.74,116,0.70,0.80,0.17
+137,Grid Runner,Retro Drive,synthwave,intense,0.86,130,0.61,0.85,0.11
+138,Glitch World,Turbo Kids,synthwave,moody,0.69,110,0.44,0.76,0.20
+139,Neon Twilight,Cyber Pulse,synthwave,focused,0.71,112,0.53,0.78,0.16
+140,Bedroom Window,Soft Spectrum,indie pop,happy,0.68,112,0.82,0.74,0.42
+141,Paper Planes,Indigo Parade,indie pop,happy,0.70,114,0.80,0.76,0.38
+142,Wildflower,Velvet Static,indie pop,happy,0.65,108,0.84,0.72,0.45
+143,Rainy Season,Harbor Lights,indie pop,moody,0.55,100,0.48,0.68,0.52
+144,Coffee and Clouds,Soft Spectrum,indie pop,chill,0.48,92,0.65,0.62,0.60
+145,Honey Days,Indigo Parade,indie pop,happy,0.72,116,0.83,0.77,0.36
+146,Lost in Transit,Velvet Static,indie pop,moody,0.58,104,0.46,0.70,0.48
+147,Golden Thread,Harbor Lights,indie pop,happy,0.66,110,0.81,0.73,0.43
+148,Autumn Sweater,Soft Spectrum,indie pop,chill,0.50,94,0.63,0.64,0.58
+149,Telescope,Indigo Parade,indie pop,moody,0.60,106,0.50,0.71,0.46
+150,Lemon Tree,Velvet Static,indie pop,happy,0.67,111,0.85,0.74,0.41
+151,4AM Thoughts,Harbor Lights,indie pop,moody,0.52,96,0.44,0.66,0.55
+152,Sunday Afternoon,Soft Spectrum,indie pop,relaxed,0.44,88,0.68,0.60,0.64
+153,Porch Swing,Indigo Parade,indie pop,relaxed,0.40,85,0.70,0.58,0.68
+154,Neon Daydream,Velvet Static,indie pop,happy,0.71,115,0.79,0.76,0.37
+155,Salt and Light,Harbor Lights,indie pop,moody,0.57,102,0.47,0.69,0.50
+156,Glass Garden,Soft Spectrum,indie pop,chill,0.46,90,0.64,0.61,0.62
+157,Stargazer,Indigo Parade,indie pop,happy,0.69,113,0.82,0.75,0.40
+158,Velvet Groove,Silk Lane,r&b,relaxed,0.55,95,0.75,0.72,0.45
+159,After Midnight,Deep Soul,r&b,moody,0.60,98,0.55,0.70,0.40
+160,Golden Touch,Rhythm House,r&b,happy,0.65,105,0.80,0.76,0.35
+161,Slow Burn,Silk Lane,r&b,relaxed,0.50,90,0.70,0.68,0.50
+162,Smooth Landing,Deep Soul,r&b,relaxed,0.52,92,0.72,0.70,0.48
+163,Saturday Night,Rhythm House,r&b,happy,0.70,108,0.82,0.78,0.30
+164,Heartlines,Silk Lane,r&b,moody,0.58,96,0.52,0.71,0.42
+165,Midnight Groove,Deep Soul,r&b,moody,0.62,100,0.50,0.73,0.38
+166,Satin Dreams,Rhythm House,r&b,relaxed,0.48,88,0.74,0.66,0.52
+167,Summer Wine,Silk Lane,r&b,happy,0.67,106,0.83,0.77,0.33
+168,Deep Feeling,Deep Soul,r&b,moody,0.56,94,0.53,0.69,0.44
+169,Warm Nights,Rhythm House,r&b,relaxed,0.53,92,0.71,0.69,0.47
+170,City Rain,Silk Lane,r&b,moody,0.59,97,0.51,0.72,0.41
+171,Rooftop Serenade,Deep Soul,r&b,happy,0.63,102,0.78,0.74,0.37
+172,Honeydew,Rhythm House,r&b,chill,0.45,86,0.68,0.63,0.55
+173,Street Poet,Block Signal,hip-hop,focused,0.70,90,0.55,0.80,0.20
+174,Hustle Mode,East Side Flow,hip-hop,intense,0.80,100,0.60,0.85,0.12
+175,Mind Maps,Block Signal,hip-hop,focused,0.65,88,0.52,0.78,0.22
+176,Crown Up,East Side Flow,hip-hop,happy,0.75,98,0.72,0.83,0.15
+177,Concrete Jungle,Beat Factory,hip-hop,intense,0.82,102,0.58,0.86,0.10
+178,Lay Low,Block Signal,hip-hop,relaxed,0.55,82,0.62,0.74,0.28
+179,Grind Season,East Side Flow,hip-hop,focused,0.72,92,0.54,0.81,0.18
+180,Block Party,Beat Factory,hip-hop,happy,0.78,100,0.74,0.84,0.14
+181,Late Night Thoughts,Block Signal,hip-hop,moody,0.60,86,0.48,0.76,0.25
+182,Rise Up,East Side Flow,hip-hop,intense,0.83,104,0.65,0.87,0.09
+183,Flow State,Beat Factory,hip-hop,focused,0.68,90,0.56,0.79,0.20
+184,City Lights,Block Signal,hip-hop,relaxed,0.58,84,0.64,0.75,0.26
+185,Champion,East Side Flow,hip-hop,happy,0.77,99,0.73,0.84,0.13
+186,Deep Thought,Beat Factory,hip-hop,focused,0.63,87,0.50,0.77,0.22
+187,Hustle and Heart,Block Signal,hip-hop,intense,0.79,101,0.62,0.85,0.11
+188,Bass Drop,Electric Storm,electronic,intense,0.92,140,0.62,0.90,0.05
+189,Pulse Wave,Circuit Break,electronic,focused,0.78,125,0.55,0.85,0.08
+190,Digital Bliss,Electric Storm,electronic,happy,0.80,128,0.72,0.88,0.06
+191,Frequency,Circuit Break,electronic,intense,0.88,135,0.58,0.89,0.07
+192,Algorithm,Electric Storm,electronic,focused,0.75,122,0.52,0.84,0.09
+193,Waveform,Circuit Break,electronic,moody,0.70,115,0.45,0.82,0.12
+194,Club Zero,Electric Storm,electronic,intense,0.90,138,0.60,0.91,0.05
+195,Signal Path,Circuit Break,electronic,focused,0.73,118,0.54,0.83,0.10
+196,Deep Current,Electric Storm,electronic,moody,0.68,112,0.43,0.80,0.14
+197,Phase Shift,Circuit Break,electronic,intense,0.85,132,0.57,0.88,0.08
+198,Synthetic High,Electric Storm,electronic,happy,0.82,130,0.70,0.87,0.07
+199,Data Stream,Circuit Break,electronic,focused,0.76,123,0.53,0.85,0.09
+200,Overdrive Pulse,Electric Storm,electronic,intense,0.91,140,0.59,0.90,0.06
