@@ -1,7 +1,10 @@
 import csv
+import logging
 
 from typing import List, Dict, Tuple, Optional
 from dataclasses import dataclass
+
+logger = logging.getLogger(__name__)
 
 @dataclass
 class Song:
@@ -106,6 +109,8 @@ def load_songs(csv_path: str) -> List[Dict]:
     """
     songs: List[Dict] = []
 
+    logger.info("Loading songs from %s", csv_path)
+
     with open(csv_path, mode="r", newline="", encoding="utf-8") as file:
         reader = csv.DictReader(file)
 
@@ -113,21 +118,25 @@ def load_songs(csv_path: str) -> List[Dict]:
             if not row:
                 continue
 
-            songs.append(
-                {
-                    "id": int(row["id"]),
-                    "title": row["title"],
-                    "artist": row["artist"],
-                    "genre": row["genre"],
-                    "mood": row["mood"],
-                    "energy": float(row["energy"]),
-                    "tempo_bpm": float(row["tempo_bpm"]),
-                    "valence": float(row["valence"]),
-                    "danceability": float(row["danceability"]),
-                    "acousticness": float(row["acousticness"]),
-                }
-            )
+            try:
+                songs.append(
+                    {
+                        "id": int(row["id"]),
+                        "title": row["title"],
+                        "artist": row["artist"],
+                        "genre": row["genre"],
+                        "mood": row["mood"],
+                        "energy": float(row["energy"]),
+                        "tempo_bpm": float(row["tempo_bpm"]),
+                        "valence": float(row["valence"]),
+                        "danceability": float(row["danceability"]),
+                        "acousticness": float(row["acousticness"]),
+                    }
+                )
+            except (KeyError, ValueError) as e:
+                logger.warning("Skipping malformed row %s: %s", row, e)
 
+    logger.info("Loaded %d songs", len(songs))
     return songs
 
 def score_song(user_prefs: Dict, song: Dict) -> Tuple[float, List[str]]:
