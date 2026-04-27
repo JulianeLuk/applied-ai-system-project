@@ -130,10 +130,16 @@ if submit:
     )
 
     # --- Display rule-based results ---
+    MAX_SCORE = 7.0  # theoretical max: genre(2) + mood(1.5) + energy(2) + acoustic(1) + valence(0.5)
     st.subheader(f"Top {k} Recommendations")
     for i, (song, score, reasons) in enumerate(top_songs, 1):
+        confidence = score / MAX_SCORE
         reason_text = "; ".join(reasons) if isinstance(reasons, list) else str(reasons)
-        with st.expander(f"{i}. {song['title']} — {song['artist']}  |  Score: {score:.2f}"):
+        logger.info(
+            "Song '%s' — score: %.2f, confidence: %.0f%%",
+            song["title"], score, confidence * 100,
+        )
+        with st.expander(f"{i}. {song['title']} — {song['artist']}  |  Score: {score:.2f} / {MAX_SCORE:.1f}"):
             col1, col2 = st.columns(2)
             with col1:
                 st.write(f"**Genre:** {song['genre']}")
@@ -141,6 +147,8 @@ if submit:
             with col2:
                 st.write(f"**Energy:** {song['energy']:.2f}")
                 st.write(f"**Acousticness:** {song['acousticness']:.2f}")
+            st.write(f"**Match confidence:** {confidence:.0%}")
+            st.progress(confidence)
             st.caption(f"Why: {reason_text}")
 
     st.divider()

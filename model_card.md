@@ -49,7 +49,7 @@ Prompts:
 - What genres or moods are represented  
 - Did you add or remove data  
 - Are there parts of musical taste missing in the dataset  
-The dataset contains 10 songs stored in data/songs.csv, with a mix of genres like pop, lofi, rock, jazz, ambient, synthwave, and indie pop. It also includes moods such as happy, chill, intense, relaxed, and focused, along with numeric audio features like energy, tempo, valence, danceability, and acousticness. I did not modify the dataset, but it is very small and not fully representative of real music platforms. Most of the songs reflect a simple “vibe-based” collection, so it’s more like a curated sample for testing logic rather than a realistic or balanced music library.
+The dataset contains 200 songs stored in data/songs.csv, covering 10 genres: pop, lofi, rock, jazz, ambient, synthwave, indie pop, electronic, hip-hop, and r&b. Moods represented are happy, chill, intense, relaxed, moody, and focused, along with numeric audio features for energy, tempo, valence, danceability, and acousticness. I did not modify the dataset. While 200 songs is large enough to test ranking logic meaningfully, it is still not representative of a real music platform — genres like electronic and r&b have fewer entries than pop and lofi, which can bias the top results for those users.
 ---
 
 ## 5. Strengths  
@@ -89,7 +89,13 @@ Prompts:
 - Any simple tests or comparisons you ran  
 
 No need for numeric metrics unless you created some.
-I tested the recommender by creating multiple user profiles and checking whether the top recommended songs matched what I would expect based on their preferences. For simple profiles with clear taste (like pop + upbeat + high energy), the results were consistently good and aligned with intuition. For more mixed profiles, I looked at whether the system balanced different features or over-prioritized one signal like genre or energy. I also compared results across different genres to see if any type of user was consistently underserved or if certain features were dominating the ranking.
+The system is evaluated through three mechanisms:
+
+**Automated tests (7 / 7 passing):** Two test files cover the full recommendation pipeline. `test_consistency.py` checks that identical inputs always return the same top song, that every score stays within the 0–7.0 range, that exactly k results are returned, that results are sorted highest-to-lowest, and that opposite taste profiles produce different top songs. `test_recommender.py` confirms that the OOP recommender ranks a matching song first and that rule-based explanations are never empty. All 7 tests pass in under 0.1 seconds.
+
+**Confidence scoring:** Every recommendation now displays a match confidence percentage computed as `score / 7.0`, where 7.0 is the theoretical maximum. A song that hits genre, mood, energy, acoustic, and valence perfectly scores 7.0 / 100% confidence. This gives users an immediate sense of how well each result actually fits their profile rather than just seeing a raw number.
+
+**Logging:** All recommendation requests, individual song scores with confidence percentages, and AI explainer responses are written to `logs/app.log` with timestamps. Errors (missing API key, malformed CSV rows, failed API calls) are recorded at WARNING or ERROR level, so any failure leaves a traceable record.
 ---
 
 ## 8. Future Work  
